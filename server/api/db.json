@@ -1,0 +1,23 @@
+{
+  "git": [
+    {
+      "id": 1,
+      "init": {
+        "description": "Used to start an empty git repository.",
+        "examples": [
+          {
+            "context": "Pre-existing repo",
+            "input": "git init",
+            "output": "Reinitialized existing Git repository in /Users/handre/Code/ng1-component-starter/.git/"
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "add": {
+        "description": "Used to add items to the \"staging aread\""
+      }
+    }
+  ]
+}
