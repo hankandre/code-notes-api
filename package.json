@@ -4,7 +4,7 @@
   "description": "A starting place for building an Angular 1 app with components",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/.bin/webpack-dev-server --inline --content-base src/",
+    "start": "concurrently \"npm run server\" \"node ./node_modules/.bin/webpack-dev-server --inline --content-base src/\"",
     "server": "json-server --watch server/api/db.json"
   },
   "author": "Hank Andre",
@@ -22,9 +22,11 @@
     "babel-loader": "^6.2.8",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.18.0",
+    "concurrently": "^3.1.0",
     "css-loader": "^0.26.1",
     "file-loader": "^0.9.0",
     "ng-annotate-loader": "^0.2.0",
+    "ng-annotate-webpack-plugin": "^0.1.3",
     "node-sass": "^3.13.0",
     "normalize.css": "^5.0.0",
     "postcss": "^5.2.6",

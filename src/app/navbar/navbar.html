@@ -1,10 +1,10 @@
 <div class="mdl-layout__header-row">
-    <span class="mdl-layout-title">Sorting Hat</span>
+    <span class="mdl-layout-title" ui-sref="home">Sorting Hat</span>
     
     <div class="mdl-layout-spacer"></div>
 
     <nav class="mdl-navigation">
-        <a ng-repeat="cohort in navbarCtrl.cohorts" ui-sref="{{cohort.link}}">{{cohort.name}}</a>
+        <a class="mdl-navigation__link" ng-repeat="cohort in navbarCtrl.cohorts" ui-sref="{{cohort.id}}">{{cohort.name}}</a>
     </nav>
     
 </div>

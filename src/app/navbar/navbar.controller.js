@@ -1,10 +1,8 @@
 class NavbarController {
-    constructor() {
-        this.cohorts = [
-            {link: 'tau', name: 'Tau'},
-            {link: 'sigma', name: 'Sigma'},
-            {link: 'upsilon', name: 'Upsilon'}
-        ]
+    constructor(CohortsModel) {
+        'ngInject';
+        CohortsModel.getCohorts()
+            .then((response) => this.cohorts = response.data )
     }
 }
 

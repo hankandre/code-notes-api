@@ -1,3 +1,9 @@
-.mdl-navigation a {
-    margin-left: 2vw;
+navbar {
+    span, a {
+    cursor: pointer;
+    }
+    .mdl-navigation a {
+        margin-left: 2vw;
+        font-size: 2vh;
+    }    
 }
