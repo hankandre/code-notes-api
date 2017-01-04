@@ -12,7 +12,8 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-ui-router": "^0.3.2",
-    "json-server": "^0.9.4"
+    "json-server": "^0.9.4",
+    "prismjs": "^1.6.0"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.9",
