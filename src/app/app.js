@@ -5,10 +5,10 @@ import 'normalize.css';
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 import AppComponent from './app.component';
-import navbarModule from './navbar/navbar';
+import HeaderModule from './navbar/navbar';
 
 const appModule = angular.module('app', [
     uirouter,
-    navbarModule.name
+    HeaderModule.name
 ]).component('app', AppComponent);
 
