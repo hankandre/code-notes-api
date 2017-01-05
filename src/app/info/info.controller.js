@@ -9,7 +9,7 @@ class InfoController {
 
     getCommand(id){
         return this.gitService.getCommand(id)
-            then(response => console.log(response.data));
+            .then(response => console.log(response.data));
     }
 }
 

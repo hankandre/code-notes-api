@@ -21,7 +21,7 @@ import AppRoutes from './app.routes';
 import AppTheme from './app.theme';
 
 import AppComponent from './app.component';
-import NavbarModule from './navbar/navbar';
+import NavbarModule from './header/header';
 import FooterModule from './footer/footer';
 import CommonModule from './common/common';
 import SearchModule from './search/search';
