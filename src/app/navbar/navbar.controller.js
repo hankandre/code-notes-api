@@ -1,6 +1,8 @@
 class NavbarController {
-    constructor() {
-
+    constructor(gitService) {
+        'ngInject';
+        gitService.getList()
+            .then(response => console.log(JSON.stringify(response.data, null, 4)));
     }
 }
 

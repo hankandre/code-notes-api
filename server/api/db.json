@@ -2,22 +2,49 @@
   "git": [
     {
       "id": 1,
-      "init": {
+      "disabled": false,
+      "command": "init",
+      "data": {
         "description": "Used to start an empty git repository.",
         "examples": [
           {
             "context": "Pre-existing repo",
             "input": "git init",
-            "output": "Reinitialized existing Git repository in /Users/handre/Code/ng1-component-starter/.git/"
+            "output": "Reinitialized existing Git repository in <directory>"
+          },
+          {
+            "context": "No existing repo",
+            "input": "git init",
+            "output": "Initialized empty Git repository in <directory>"
           }
         ]
       }
     },
     {
-      "id": 2,
-      "add": {
-        "description": "Used to add items to the \"staging aread\""
-      }
+      "command": "dasfd",
+      "data": {
+        "description": "dafsd",
+        "example": {
+          "context": "asfdds",
+          "input": "asdfsda",
+          "output": "dsafsd"
+        }
+      },
+      "disabled": false,
+      "id": 2
+    },
+    {
+      "command": "dasfd",
+      "data": {
+        "description": "dafsd",
+        "example": {
+          "context": "asfdds",
+          "input": "asdfsda",
+          "output": "dsafsd"
+        }
+      },
+      "disabled": false,
+      "id": 3
     }
   ]
 }

@@ -1,0 +1,38 @@
+<section class="mdl-cell mdl-cell--6-col mdl-cell--3-offset">
+     <div class="demo-card mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Add a Note</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            <p>Add a git command you'd like to remember</p>
+            <form novalidate>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" ng-model="addCtrl.note.command" id="command">
+                    <label class="mdl-textfield__label" for="command" >Command</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" ng-model="addCtrl.note.data.description" rows= "3" id="description" ></textarea>
+                    <label class="mdl-textfield__label" for="description" >Description</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" ng-model="addCtrl.note.data.example.context" id="context">
+                    <label class="mdl-textfield__label" for="context" >Context</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" ng-model="addCtrl.note.data.example.input" id="input">
+                    <label class="mdl-textfield__label" for="input" >Input</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input class="mdl-textfield__input" type="text" ng-model="addCtrl.note.data.example.output" id="output">
+                    <label class="mdl-textfield__label" for="output" >Ouput</label>
+                </div>
+            </form>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a ng-click="addCtrl.addNote(addCtrl.note)" 
+               class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            Submit
+            </a>
+        </div>
+    </div>
+</section>

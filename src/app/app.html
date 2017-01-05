@@ -4,18 +4,15 @@
 
 <!-- Where primary content will be loaded. -->
 
-
-<section class="mdl-layout__content page-content">
-    <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset">
-            <search>
-
-            </search>
-        </div>
-        <div class="mdl-cell mdl-cell--6-col">
-           <info></info>
-       </div>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col commands" >
+        <span class="mdl-chip" ng-click="appCtrl.select(note)" ng-repeat="note in appCtrl.commands">
+            <span class="mdl-chip__text">{{note.command}}</span>
+        </span>
     </div>
+</div>
+<section class="mdl-layout__content page-content" ui-view>
+   
 </section>
 
 <!-- Footer Content -->
