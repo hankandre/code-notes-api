@@ -4,8 +4,8 @@
 import angular from 'angular';
 import navbarComponent from './navbar.component';
 
-const NavbarModule = angular.module('navbar', [
+const NavbarModule = angular.module('header', [
 
-]).component('navbar', navbarComponent);
+]).component('header', navbarComponent);
 
 export default NavbarModule;
