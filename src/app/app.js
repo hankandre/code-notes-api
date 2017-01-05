@@ -23,7 +23,7 @@ import AppTheme from './app.theme';
 import AppComponent from './app.component';
 import NavbarModule from './navbar/navbar';
 import FooterModule from './footer/footer';
-import GitModule from './git/git';
+import CommonModule from './common/common';
 import SearchModule from './search/search';
 import InfoModule from './info/info';
 import AddModule from './add/add';
@@ -36,7 +36,7 @@ const appModule = angular.module('app', [
     // These modules contain logic all specific to themselves
     NavbarModule.name,
     FooterModule.name,
-    GitModule.name,
+    CommonModule.name,
     SearchModule.name,
     InfoModule.name,
     AddModule.name
