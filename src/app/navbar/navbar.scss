@@ -1,9 +1,16 @@
-navbar {
-    span, a {
-    cursor: pointer;
+navbar md-content {
+    background-color: red;
+    .logo {
+        width: 2.5vw;
+        height: 100%;
+        background-image: url('https://git-scm.com/images/logos/downloads/Git-Icon-Black.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 10px;
     }
-    .mdl-navigation a {
-        margin-left: 2vw;
-        font-size: 2vh;
-    }    
+    & * {
+        color: white;
+        font-weight: 600;
+    }   
 }

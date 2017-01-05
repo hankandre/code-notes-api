@@ -8,21 +8,23 @@ export default function($stateProvider, $urlRouterProvider, $locationProvider) {
         {
             name: 'home',
             url: '/home',
-            template: `<div class="mdl-grid">
-                            <div class="mdl-cell mdl-cell--4-col mdl-cell--1-offset">
-                                <search>
+            template: `<md-content class="md-padding" layout-xs="column" layout="row">
+                            <search>
 
-                                </search>
-                            </div>
-                            <div class="mdl-cell mdl-cell--6-col">
-                                <info></info>
-                            </div>
-                        </div>`
+                            </search>
+                            <info flex="70">
+
+                            </info>
+                        </md-content>`
         },
         {
             name: 'add',
             url: '/add',
-            template: '<add class="mdl-grid"></add>',
+            template: `
+                <md-content layout="row" layout-align="center center">
+                    <add flex="33"></add>
+                </md-content>
+            `,
             resolve: {
                 list: function list(gitService){
                     return gitService.getList()

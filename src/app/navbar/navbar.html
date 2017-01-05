@@ -1,10 +1,11 @@
-<div class="mdl-layout__header-row">
-    <span class="mdl-layout-title" ui-sref="home">Git Notes</span>
-    
-    <div class="mdl-layout-spacer"></div>
-
-    <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" ui-sref="add">Add</a>
-    </nav>
-    
-</div>
+<md-content>
+    <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links" class="md-primary">
+        <div layout="row" layout-align="space-around center">
+            <span class="logo" width="2vw" height="auto"></span>
+            <span class="md-padding">Git Notes</span>
+        </div>
+        <span flex></span>
+        <md-nav-item md-nav-sref="home" name="Home">Home</md-nav-item>
+        <md-nav-item md-nav-sref="add" name="Add">Add</md-nav-item>
+    </md-nav-bar>
+</md-content>

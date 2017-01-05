@@ -1,19 +1,19 @@
 
 <!-- Navbar and Header -->
-<navbar class="mdl-layout__header"></navbar>
+<navbar></navbar>
 
 <!-- Where primary content will be loaded. -->
 
-<div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--12-col commands" >
-        <span class="mdl-chip" ng-click="appCtrl.select(note)" ng-repeat="note in appCtrl.commands">
-            <span class="mdl-chip__text">{{note.command}}</span>
-        </span>
-    </div>
-</div>
-<section class="mdl-layout__content page-content" ui-view>
+<md-content layout="row" layout-align="center center">
+    <md-chips ng-model="appCtrl.commands" readonly="true" md-removable="true">
+        <md-chip-template>
+            <span ng-click="appCtrl.select($chip)">{{$chip.command}}</span>
+        </md-chip-template>
+    </md-chips>
+</md-content>
+<section layout-padding ui-view>
    
 </section>
 
 <!-- Footer Content -->
-<footer class="mdl-mini-footer"></footer>
+<footer layout-padding layout="row" layout-align="space-between center"></footer>

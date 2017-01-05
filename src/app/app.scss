@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Raleway', sans-serif;
     min-width: 100vw;
@@ -10,12 +11,13 @@ body {
         height: 100vh;
         position: relative;
 
-        .content {
-            flex: 1 90%;
+        & > section {
+            flex-grow: 1;
         }
 
         .commands > span{
             margin-left: 1vw;
         }
+        
     }
 }

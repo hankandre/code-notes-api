@@ -45,6 +45,34 @@
       },
       "disabled": false,
       "id": 3
+    },
+    {
+      "command": "sadfds",
+      "data": {
+        "description": "asdfsf",
+        "example": {
+          "context": "safds",
+          "input": "sadf",
+          "output": "safdsf"
+        }
+      },
+      "disabled": false,
+      "id": 4
+    },
+    {
+      "disabled": false,
+      "command": "branch",
+      "data": {
+        "description": "Creates a new git branch based off of the current state of the directory being tracked",
+        "examples": [
+          {
+            "context": "stuff",
+            "input": "things",
+            "output": "more stuff"
+          }
+        ]
+      },
+      "id": 5
     }
   ]
 }
