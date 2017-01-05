@@ -1,10 +1,10 @@
 'use strict';
 
-import template from './navbar.html';
-import './navbar.scss';
+import template from './header.html';
+import './header.scss';
 
-const navbarComponent = {
+const headerComponent = {
     template
 };
 
-export default navbarComponent;
+export default headerComponent;

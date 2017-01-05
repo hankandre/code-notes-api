@@ -2,7 +2,7 @@
 
 
 import angular from 'angular';
-import navbarComponent from './navbar.component';
+import navbarComponent from './header.component';
 
 const NavbarModule = angular.module('header', [
 
