@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "An api for coding notes",
+  "main": "index.js",
+  "author": "Hank Andre <hankandre@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src"
+  },
+  "dependencies": {
+    "apollo-server-micro": "^1.1.2",
+    "micro": "^8.0.3",
+    "mongoose": "^4.11.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "chalk": "^2.1.0",
+    "nodemon": "^1.11.0"
+  }
+}
