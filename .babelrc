@@ -3,7 +3,9 @@
     [
       "env",
       {
-        "modules": "umd"
+        "targets": {
+          "browsers": "last 2 versions"
+        }
       }
     ],
     "react"

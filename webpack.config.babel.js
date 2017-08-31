@@ -1,96 +1,53 @@
-import { resolve } from 'path';
+import { resolve, join } from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import UglifyjsWebpackPlugin from 'uglifyjs-webpack-plugin';
-import nodeExternals from 'webpack-node-externals';
+import htmlWebpackTemplate from 'html-webpack-template';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import HtmlWebpackHarddiskPlugin from 'html-webpack-harddisk-plugin';
 import webpack from 'webpack';
 
-export default env => {
-  return [
-    {
-      target: 'node',
-      context: resolve('api'),
-      entry: {
-        main: './index.js'
-      },
-      output: {
-        filename: 'server.js',
-        path: resolve(__dirname, 'dist/api/')
-      },
-      devtool: env.prod ? 'source-map' : 'eval',
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  'env',
-                  {
-                    targets: {
-                      node: true,
-                      modules: 'umd',
-                      debug: true
-                    }
-                  }
-                ]
-              ]
-            }
-          }
-        ]
-      }
+export default (env = {}) => {
+  return {
+    context: resolve(__dirname, 'src/'),
+    entry: './app.js',
+    output: {
+      filename: '[name].[chunkhash].js',
+      path: resolve(__dirname, 'dist/js'),
+      publicPath: 'js'
     },
-    {
-      context: resolve('client/app/'),
-      entry: {
-        main: './index.js'
-      },
-      output: {
-        filename: '[name].[chunkhash].js',
-        path: resolve(__dirname, 'dist/client/')
-      },
 
-      devtool: env.prod ? 'source-map' : 'eval',
+    module: {
+      rules: [
+        {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          loader: 'babel-loader'
+        }
+      ]
+    },
 
-      stats: {
-        colors: true,
-        reasons: true,
-        chunks: true
-      },
+    devtool: env.prod ? 'source-map' : 'eval',
 
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                [
-                  'env',
-                  {
-                    targets: {
-                      browsers: 'last 2 versions'
-                    }
-                  }
-                ],
-                'react'
-              ]
-            }
-          }
-        ]
-      },
-
-      plugins: [
+    plugins: (() => {
+      let defaultPlugins = [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
           title: 'Code Notes',
-          template: resolve(__dirname, 'client/index.html'),
-          inject: 'body'
-        })
-      ]
+          template: htmlWebpackTemplate,
+          inject: 'body',
+          appMountId: 'root',
+          filename: '../index.html',
+          alwaysWriteToDisk: true
+        }),
+        new HtmlWebpackHarddiskPlugin()
+      ];
+      if (env.prod) {
+        defaultPlugins.concat([new webpack.optimize.UglifyJsPlugin()]);
+      }
+      return defaultPlugins;
+    })(),
+
+    devServer: {
+      contentBase: 'dist'
     }
-  ];
+  };
 };
